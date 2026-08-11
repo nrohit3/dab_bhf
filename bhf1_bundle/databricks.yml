@@ -41,5 +41,5 @@ targets:
       catalog: dab_catalog_prod
       schema: rnd
     permissions:
-      - user_name: nrohit3@gmail.com
+      - user_name: dbvrsn90@gmail.com
         level: CAN_MANAGE

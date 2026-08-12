@@ -23,14 +23,18 @@ targets:
     # - Any job schedules and triggers are paused by default.
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
     mode: production
-    default: true
+    #default: true
     workspace:
       host: https://dbc-c59b1472-afc6.cloud.databricks.com
       root_path: /Workspace/Shared/bhf1/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: dab_catalog_dev
       schema: rnd
-    
+    permissions:
+      - user_name: nrohit3@gmail.com
+        level: CAN_MANAGE
+      - group_name: users
+        level: CAN_MANAGE
   prod:
     mode: production
     workspace:

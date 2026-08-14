@@ -1,0 +1,15 @@
+resources:
+  jobs:
+    job_bhf_metadata_table_creation:
+      name: job_bhf_metadata_table_creation
+      tasks:
+        - task_key: metadata_table_creation
+          notebook_task:
+            notebook_path: /Workspace/Users/nrohit3@gmail.com/dab_bhf_feature/bhf1_bundle/bhf_project/1.setup_metadata/setup_metadata
+            base_parameters:
+              catalog_name: ${var.catalog}
+              schema: ${var.schema}
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED

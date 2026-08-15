@@ -13,6 +13,9 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
+  env:
+    description: The env to use    
+
 
 targets:
   dev:
@@ -30,6 +33,8 @@ targets:
     variables:
       catalog: dab_catalog_dev
       schema: rnd
+      env: dev
+    
     permissions:
       - user_name: nrohit3@gmail.com
         level: CAN_MANAGE
@@ -44,6 +49,7 @@ targets:
     variables:
       catalog: dab_catalog_prod
       schema: rnd
+      env: prod
     permissions:
       - user_name: dbvrsn90@gmail.com
         level: CAN_MANAGE

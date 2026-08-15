@@ -5,7 +5,7 @@ resources:
       tasks:
         - task_key: metadata_table_creation
           notebook_task:
-            notebook_path: /Workspace/Shared/bhf1/.bundle/bhf1_bundle/dev/files/bhf_project/1.setup_metadata/setup_metadata
+            notebook_path: /Workspace/Shared/bhf1/.bundle/bhf1_bundle/${var.env}/files/bhf_project/1.setup_metadata/setup_metadata
             base_parameters:
               catalog_name: ${var.catalog}
               schema: ${var.schema}
